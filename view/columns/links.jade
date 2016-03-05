@@ -12,8 +12,6 @@ mixin lang(name)
   +link(__(name), '?'+locales.param+'='+name)
     span.lang
       = __(name)
-      if name == locale
-        span.sr-only (current)
 
 extends layout
 
