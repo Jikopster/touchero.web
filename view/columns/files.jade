@@ -1,0 +1,18 @@
+extends layout
+
+block title
+  = __('Downloads')
+  | 
+  .label.label-default.label-sm
+    span.icon.icon_windows
+    |  7+
+
+mixin item(v, title)
+    a.btn.btn-lg.btn-default(href='http://zip.jikopster.org/org.jikopster.touchero.#{v}.zip', download type='application/zip')
+      span.icon.icon_download
+      | 
+      = title || v
+    | 
+
+block content
+  +item('preview', 'Preview')

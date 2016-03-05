@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "Nightmare Hero";
+  src: url("../fonts/Nightmare_Hero_Normal.ttf") format("truetype");
+}
+
+.touchero {
+  display: inline-block;
+
+  .letter {
+    display: inline-block;
+    font-family: "Nightmare Hero";
+    color: #000;
+    text-shadow: 0 0 0 7px #fff;
+    @media screen and (min-width: @screen-sm-min) {
+      text-shadow: 0 0 0 15px #fff;
+    }
+    
+    .letter(@size) {
+      font-size: @size;
+    }
+
+    &.L {
+      .letter(170%);
+    }
+    &.l {
+      .letter(230%);
+    }
+    
+    &.TH {
+      .letter(235px);
+      text-shadow: 0 0 0 25px #fff;
+      @media (max-width: @screen-xs-max) {
+        line-height: 1;
+      }
+    }
+  }
+  
+}
